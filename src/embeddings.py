@@ -51,9 +51,10 @@ def get_embeddings_batch(texts: list, is_query: bool = False) -> list:
     active_model = get_active_embedding_model()
     task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
     try:
+        contents = [types.Content(parts=[types.Part(text=s)]) for s in texts]
         response = client.models.embed_content(
             model=active_model,
-            contents=texts,
+            contents=contents,
             config=types.EmbedContentConfig(task_type=task_type)
         )
         return [emb.values for emb in response.embeddings]

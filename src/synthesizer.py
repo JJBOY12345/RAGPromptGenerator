@@ -33,20 +33,87 @@ def classify_category(user_goal: str) -> str:
         "Business Strategy"
     ]
     
-    # 1. Primary: Fast, rate-limit-free keyword classification
+    # 1. Primary: Fast, rate-limit-free keyword/phrase classification
     user_goal_lower = user_goal.lower()
-    if any(w in user_goal_lower for w in ["build", "code", "app", "application", "software", "program", "database", "api", "develop", "framework", "schema", "full-stack", "frontend", "backend"]):
-        return "Software Development"
-    if any(w in user_goal_lower for w in ["teach", "learn", "study", "explain", "understand", "lesson", "education", "tutorial", "course", "tutor"]):
-        return "Learning"
-    if any(w in user_goal_lower for w in ["write", "linkedin", "post", "blog", "tweet", "content", "copywrite", "advertisement", "copy", "caption", "campaign"]):
-        return "Content Creation"
-    if any(w in user_goal_lower for w in ["research", "analyze", "methodology", "investigate", "compare", "academic", "papers", "science"]):
-        return "Research"
-    if any(w in user_goal_lower for w in ["image", "picture", "photo", "drawing", "portrait", "paint", "art", "render", "cinematic", "photorealistic"]):
-        return "Image Generation"
-    if any(w in user_goal_lower for w in ["business", "marketing", "strategy", "competitor", "product", "sales", "revenue", "swot", "plan", "startup"]):
-        return "Business Strategy"
+    
+    # Tier 1: Action/Intent Phrase Match (Strongest signals, ordered specific to broad)
+    intent_phrases = {
+        "Image Generation": [
+            "brand illustration", "product photo", "photorealistic brand",
+            "mockup visual", "product photography", "portrait of", "headshot"
+        ],
+        "Learning": [
+            "study plan", "curriculum", "teach me", "tutor session", 
+            "lesson plan", "how it works", "guide explaining", 
+            "explain the concept", "interactive quiz", "quiz to test",
+            "curriculum for", "interactive quiz on"
+        ],
+        "Content Creation": [
+            "linkedin post", "blog post", "blog outline", "technical blog", 
+            "social media", "marketing copy", "promotional campaign", 
+            "api documentation", "write documentation", "executive memo",
+            "linkedin content", "linkedin", "marketing messaging", "blog post about",
+            "technical blog post", "write linkedin"
+        ],
+        "Software Development": [
+            "database schema", "postgresql schema", "mysql schema", "rest api", 
+            "express api", "unit test", "code review", "checklist for reviewing", 
+            "wireframe specification", "user research", "security audit",
+            "write unit tests", "audit on", "dashboard layout", "dashboard",
+            "data analysis", "exploratory data analysis", "data insight", "insight report",
+            "accessibility review", "design system"
+        ],
+        "Business Strategy": [
+            "marketing strategy", "swot analysis", "business plan", "launch plan",
+            "product requirements", "prd", "email response", "email to", "customer service"
+        ],
+        "Research": [
+            "literature review", "synthesize research", "competitive analysis",
+            "beamer", "latex", "scientific paper", "subject matter expert", "deep dive"
+        ]
+    }
+    
+    # Check for direct phrase matches first
+    for cat, phrases in intent_phrases.items():
+        if any(phrase in user_goal_lower for phrase in phrases):
+            return cat
+            
+    # Tier 2: Refined Exact Word Token Matching (avoids substring collisions like "contract" containing "art")
+    import re
+    words = set(re.findall(r'\b\w+\b', user_goal_lower))
+    
+    word_keywords = {
+        "Software Development": {
+            "build", "code", "app", "application", "software", "api", 
+            "develop", "framework", "schema", "fullstack", "frontend", 
+            "backend", "solidity", "github", "git"
+        },
+        "Learning": {
+            "teach", "learn", "study", "explain", "understand", "lesson", 
+            "education", "tutorial", "course", "tutor", "socratic", "training", "curriculum"
+        },
+        "Content Creation": {
+            "write", "linkedin", "post", "blog", "tweet", "content", 
+            "copywrite", "advertisement", "copy", "caption", "campaign", "memo"
+        },
+        "Research": {
+            "research", "analyze", "methodology", "investigate", "compare", 
+            "academic", "papers", "science", "literature"
+        },
+        "Image Generation": {
+            "image", "picture", "photo", "drawing", "portrait", "paint", 
+            "art", "render", "cinematic", "photorealistic", "illustration"
+        },
+        "Business Strategy": {
+            "business", "marketing", "strategy", "competitor", "product", 
+            "sales", "revenue", "swot", "plan", "startup"
+        }
+    }
+    
+    # Check for exact word set intersections
+    for cat, keywords in word_keywords.items():
+        if words.intersection(keywords):
+            return cat
         
     # 2. Secondary: LLM Fallback if no keywords matched
     classification_prompt = f"""Classify the user's prompt engineering goal into EXACTLY one of these categories:
@@ -168,8 +235,14 @@ def generate_prompt(user_goal: str, top_k: int = 5) -> dict:
     # 1. Classify Category
     category = classify_category(user_goal)
     
-    # 2. Retrieve top unique documents (deduplication enabled)
-    retrieved_items = retrieve(user_goal, top_k=top_k, unique_documents=True)
+    # 2. Retrieve top unique documents (deduplication enabled with category boosting)
+    retrieved_items = retrieve(
+        user_goal, 
+        top_k=top_k, 
+        unique_documents=True,
+        classified_category=category,
+        routing_strategy="boost"
+    )
     
     # 3. Build two-layer prompt context block (reference materials only)
     context_parts = [
