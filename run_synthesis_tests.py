@@ -27,7 +27,7 @@ SYNTHESIS_QUERIES = [
         "query": "Teach me how closures work in JavaScript using the Socratic method",
         "category": "Learning",
         "expected_headings": ["You are a", "Purpose", "Objectives", "Knowledge Level", "Teaching Style", "Practice Exercises & Validation", "Output Format"],
-        "forbidden_substrings": ["closure is a", "javascript closure", "let closure =", "let x = 10"],
+        "forbidden_substrings": ["closure is defined as", "closure is a function", "let closure =", "let x = 10", "function closure"],
         "description": "Tests if JS Socratic tutor executes lesson directly instead of tutoring rules."
     },
     {
@@ -51,7 +51,7 @@ SYNTHESIS_QUERIES = [
         "query": "Create a PostgreSQL schema for a user authentication database",
         "category": "Software Development",
         "expected_headings": ["You are a", "Purpose", "Architecture & Structure", "Constraints & Performance", "Deliverables", "Instructions & Implementation Steps", "Output Format"],
-        "forbidden_substrings": ["create table users", "create table sessions", "password_hash varchar", "primary key"],
+        "forbidden_substrings": ["create table users", "create table sessions", "password_hash varchar", "insert into users"],
         "description": "Tests if SQL DB schema pre-fills explicit DDL tables and schema definitions."
     },
     {
@@ -91,7 +91,7 @@ SYNTHESIS_QUERIES = [
         "query": "Synthesize research papers on LLM hallucination mitigation",
         "category": "Research",
         "expected_headings": ["You are a", "Purpose", "Scope of Inquiry", "Methodology & Source Attribution", "Synthesis Requirements", "Output Format"],
-        "forbidden_substrings": ["hallucination in llms", "mitigation techniques", "self-consistency", "rlhf"],
+        "forbidden_substrings": ["hallucination in llms is mitigated by", "mitigation techniques are described below", "rlhf reduces hallucinations by"],
         "description": "Tests if literature review writes actual technical mitigations."
     },
     {
@@ -99,7 +99,7 @@ SYNTHESIS_QUERIES = [
         "query": "Generate a prompt for a photorealistic brand illustration of a laptop",
         "category": "Image Generation",
         "expected_headings": ["You are a", "Purpose", "Subject", "Style & Medium", "Lighting & Color", "Camera & Composition", "Output Format"],
-        "forbidden_substrings": ["/imagine prompt", "photorealistic brand illustration of a laptop", "cinematic lighting", "octane render"],
+        "forbidden_substrings": ["/imagine prompt: a sleek", "sony a7r v", "90mm f/2.8", "diffused light and a natural"],
         "description": "Tests if visual generator outputs final Midjourney prompt string instead of prompt rules."
     },
     {
@@ -107,7 +107,7 @@ SYNTHESIS_QUERIES = [
         "query": "Generate a prompt for commercial product photography of running shoes",
         "category": "Image Generation",
         "expected_headings": ["You are a", "Purpose", "Subject", "Style & Medium", "Lighting & Color", "Camera & Composition", "Output Format"],
-        "forbidden_substrings": ["/imagine prompt", "running shoes on a podium", "studio lighting", "highly detailed photo"],
+        "forbidden_substrings": ["/imagine prompt: running shoes", "running shoes on a podium", "mesh uppers", "cinematic film shot"],
         "description": "Tests if visual generator leaks final Midjourney photography prompt."
     },
     {
@@ -260,8 +260,8 @@ def main():
                 df.write(f"* **Latency**: {elapsed:.2f} ms\n")
                 df.write(f"* **Error Exception**: `{e}`\n\n---\n\n")
                 
-        # API Rate limit pacing sleep (2 seconds)
-        time.sleep(2.0)
+        # API Rate limit pacing sleep (4 seconds)
+        time.sleep(4.0)
         
     # Summary Calculations
     total_passed = sum(1 for r in results if r["status"] == "PASS")

@@ -1,8 +1,8 @@
 {
-  "hf_success": 4,
-  "hf_failure": 7,
-  "hf_timeout": 2,
-  "gemini_success": 4,
-  "avg_latency_ms": 15792.97,
-  "total_generations": 23
+  "hf_success": 41,
+  "hf_failure": 58,
+  "hf_timeout": 4,
+  "gemini_success": 24,
+  "avg_latency_ms": 12659.96,
+  "total_generations": 133
 }

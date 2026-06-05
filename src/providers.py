@@ -89,9 +89,9 @@ class GeminiProvider(BaseProvider):
             except Exception as e:
                 last_error = e
                 if attempt < 2:
-                    # Smart handle for 429 rate limit: sleep longer (15s) to let quota reset
+                    # Smart handle for 429 rate limit: sleep longer (45s) to let quota reset
                     err_str = str(e)
-                    sleep_time = 15 if ("429" in err_str or "RESOURCE_EXHAUSTED" in err_str) else (2 ** attempt)
+                    sleep_time = 45 if ("429" in err_str or "RESOURCE_EXHAUSTED" in err_str) else (2 ** attempt)
                     print(f"[ROUTING] Gemini attempt {attempt + 1} failed: {e}. Retrying in {sleep_time}s...")
                     time.sleep(sleep_time)
         raise RuntimeError(f"Gemini generation failed after 3 attempts: {last_error}")
