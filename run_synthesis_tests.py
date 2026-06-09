@@ -316,6 +316,17 @@ def main():
     with open(summary_path, "w") as sf:
         json.dump(summary_data, sf, indent=2)
         
+    # Unload the Ollama model if it was used to prevent running in background
+    try:
+        import requests
+        print("[CLEANUP] Unloading local Ollama model to free system resources...")
+        ollama_host = os.getenv("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
+        ollama_model = os.getenv("OLLAMA_MODEL_NAME", "qwen2.5:14b")
+        requests.post(f"{ollama_host}/api/generate", json={"model": ollama_model, "keep_alive": 0}, timeout=10)
+        print("[CLEANUP] Model unloaded successfully.")
+    except Exception as e:
+        print(f"[CLEANUP] Note: Could not unload model: {e}")
+        
     # Exit with code based on compliance
     if total_passed == total_cases:
         sys.exit(0)

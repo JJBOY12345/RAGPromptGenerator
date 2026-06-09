@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-05 13:57:06",
+  "timestamp": "2026-06-09 22:35:27",
   "total_test_cases": 15,
-  "passed_cases": 0,
+  "passed_cases": 14,
   "failed_cases": 0,
-  "error_cases": 15,
-  "structural_compliance_rate": 0.0,
-  "placeholder_usage_rate": 0.0,
+  "error_cases": 1,
+  "structural_compliance_rate": 100.0,
+  "placeholder_usage_rate": 100.0,
   "downstream_leakage_violations": 0,
-  "average_generation_latency_seconds": 0.0
+  "average_generation_latency_seconds": 11.68
 }

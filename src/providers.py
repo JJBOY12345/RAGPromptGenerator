@@ -132,6 +132,36 @@ class HuggingFaceProvider(BaseProvider):
                 raise requests.exceptions.Timeout(f"Hugging Face API request timed out (60s threshold): {e}")
             raise RuntimeError(f"Hugging Face generation failed: {e}")
 
+class OllamaProvider(BaseProvider):
+    def __init__(self, model_name: str = None, host: str = None):
+        self.model_name = model_name or os.getenv("OLLAMA_MODEL_NAME", "qwen2.5:14b")
+        self.host = host or os.getenv("OLLAMA_HOST", "http://localhost:11434")
+
+    def generate(self, system_prompt: str, user_content: str) -> str:
+        url = f"{self.host.rstrip('/')}/api/chat"
+        payload = {
+            "model": self.model_name,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_content}
+            ],
+            "options": {
+                "temperature": 0.3
+            },
+            "stream": False,
+            "keep_alive": "5m"
+        }
+        try:
+            response = requests.post(url, json=payload, timeout=300)
+            response.raise_for_status()
+            res_json = response.json()
+            text = res_json.get("message", {}).get("content", "")
+            if not text:
+                raise ValueError("Ollama returned an empty response.")
+            return text.strip()
+        except Exception as e:
+            raise RuntimeError(f"Ollama generation failed: {e}")
+
 def route_and_generate(system_prompt: str, user_content: str) -> str:
     primary = os.getenv("PRIMARY_GENERATION_PROVIDER", "huggingface").lower()
     fallback = os.getenv("FALLBACK_GENERATION_PROVIDER", "gemini").lower()
@@ -139,6 +169,20 @@ def route_and_generate(system_prompt: str, user_content: str) -> str:
     # Check if HF key exists when HF is primary
     hf_key = os.getenv("HF_API_KEY") or os.getenv("hugging_face")
     
+    if primary == "ollama":
+        print("[ROUTING] Attempting primary provider: 'ollama'")
+        start_time = time.perf_counter()
+        try:
+            provider = OllamaProvider()
+            result = provider.generate(system_prompt, user_content)
+            latency = (time.perf_counter() - start_time) * 1000.0
+            log_metric("ollama", success=True, latency_ms=latency)
+            return result
+        except Exception as e:
+            latency = (time.perf_counter() - start_time) * 1000.0
+            log_metric("ollama", success=False, latency_ms=latency)
+            raise RuntimeError(f"Primary provider 'ollama' failed: {e}")
+            
     if primary == "huggingface" and not hf_key:
         print("[ROUTING] WARNING: Primary provider 'huggingface' key not configured. Falling back to Gemini.")
         primary = "gemini"
@@ -158,16 +202,26 @@ def route_and_generate(system_prompt: str, user_content: str) -> str:
             print(f"[ROUTING] WARNING: Primary provider 'huggingface' timed out: {te}")
             print(f"[ROUTING] Triggering automatic fallback to: '{fallback}' (gemini-2.5-flash)")
             
-            # Call fallback
-            return _call_fallback(fallback, system_prompt, user_content)
+            # Call fallback (Gemini)
+            try:
+                return _call_fallback(fallback, system_prompt, user_content)
+            except Exception as ge:
+                print(f"[ROUTING] WARNING: Fallback to Gemini failed: {ge}")
+                print("[ROUTING] Triggering tertiary local fallback to: 'ollama' (qwen2.5:14b)")
+                return _call_fallback("ollama", system_prompt, user_content)
         except Exception as e:
             latency = (time.perf_counter() - start_time) * 1000.0
             log_metric("huggingface", success=False, latency_ms=latency, is_timeout=False)
             print(f"[ROUTING] WARNING: Primary provider 'huggingface' failed: {e}")
             print(f"[ROUTING] Triggering automatic fallback to: '{fallback}' (gemini-2.5-flash)")
             
-            # Call fallback
-            return _call_fallback(fallback, system_prompt, user_content)
+            # Call fallback (Gemini)
+            try:
+                return _call_fallback(fallback, system_prompt, user_content)
+            except Exception as ge:
+                print(f"[ROUTING] WARNING: Fallback to Gemini failed: {ge}")
+                print("[ROUTING] Triggering tertiary local fallback to: 'ollama' (qwen2.5:14b)")
+                return _call_fallback("ollama", system_prompt, user_content)
     else:
         # Primary is gemini
         print("[ROUTING] Attempting primary provider: 'gemini'")
@@ -181,7 +235,9 @@ def route_and_generate(system_prompt: str, user_content: str) -> str:
         except Exception as e:
             latency = (time.perf_counter() - start_time) * 1000.0
             log_metric("gemini", success=False, latency_ms=latency)
-            raise RuntimeError(f"Primary provider 'gemini' failed: {e}")
+            print(f"[ROUTING] WARNING: Primary provider 'gemini' failed: {e}")
+            print("[ROUTING] Triggering fallback to local provider: 'ollama' (qwen2.5:14b)")
+            return _call_fallback("ollama", system_prompt, user_content)
 
 def _call_fallback(provider_name: str, system_prompt: str, user_content: str) -> str:
     start_time = time.perf_counter()
@@ -192,6 +248,13 @@ def _call_fallback(provider_name: str, system_prompt: str, user_content: str) ->
             latency = (time.perf_counter() - start_time) * 1000.0
             log_metric("gemini", success=True, latency_ms=latency)
             print("[ROUTING] Success! Synthesis completed using fallback provider: 'gemini'")
+            return result
+        elif provider_name == "ollama":
+            provider = OllamaProvider()
+            result = provider.generate(system_prompt, user_content)
+            latency = (time.perf_counter() - start_time) * 1000.0
+            log_metric("ollama", success=True, latency_ms=latency)
+            print("[ROUTING] Success! Synthesis completed using local fallback provider: 'ollama'")
             return result
         else:
             provider = HuggingFaceProvider()

@@ -1,0 +1,1481 @@
+[
+  {
+    "filepath": "knowledge_base\\business\\email_communication.md",
+    "headings": [
+      "# Corporate Email Architect",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\business\\executive_summary.md",
+    "headings": [
+      "# Executive Summary Writer",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\business\\market_analysis.md",
+    "headings": [
+      "# Market Analysis & Opportunity Researcher",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\business\\product_requirements.md",
+    "headings": [
+      "# Agile Product Requirements Document (PRD) Builder",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. MISSION & IDENTITY",
+      "### 2. SCOPE BOUNDARIES (THE SHAPE UP PRINCIPLE)",
+      "### 3. TECHNICAL SPECIFICATIONS & USER STORIES",
+      "### 4. DELIVERABLES",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. MISSION & IDENTITY",
+      "### 2. SCOPE BOUNDARIES (THE SHAPE UP PRINCIPLE)",
+      "### 3. TECHNICAL SPECIFICATIONS & USER STORIES",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Product Manager and Agile Product Strategy Consultant. Your goal is to draft a c..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Product Manager and Agile Product Strategy Consultant. Your goal is to draft a c..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 12,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\content_creation\\documentation.md",
+    "headings": [
+      "# Technical Documentation Specifier",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\content_creation\\linkedin_post.md",
+    "headings": [
+      "# LinkedIn Content Architect & Post Writer",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\content_creation\\social_media_campaign.md",
+    "headings": [
+      "# Multi-Platform Social Campaign",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\content_creation\\technical_blog.md",
+    "headings": [
+      "# SEO Technical Blog & Tutorial Writer",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\data_analysis\\dashboard_design.md",
+    "headings": [
+      "# Business Intelligence Dashboard Designer",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\data_analysis\\exploratory_analysis.md",
+    "headings": [
+      "# Exploratory Data Analysis (EDA) Blueprint",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. DATASET PROFILE & DIMENSIONS",
+      "### 2. ANALYTICAL STEPS & SCRIPT SPECIFICATION",
+      "### 3. VISUALIZATION DIRECTIVES",
+      "### 4. DELIVERABLES EXPECTED",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. DATASET PROFILE & DIMENSIONS",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Data Scientist and Business Intelligence Analyst specializing in statistical mod..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Data Scientist and Business Intelligence Analyst specializing in statistical mod..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 11,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\data_analysis\\insight_report.md",
+    "headings": [
+      "# Executive Insight Report Writer",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\image_generation\\brand_illustration.md",
+    "headings": [
+      "# Corporate Brand Illustration Prompt Architect",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\image_generation\\product_photography.md",
+    "headings": [
+      "# Commercial Product Photography Prompt Generator",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. PRODUCT BRAND & IDENTITY",
+      "### 2. SCENE STYLING & SET DESIGN",
+      "### 3. STUDIO LIGHTING RIG & COLOR ENGINE",
+      "### 4. TECHNICAL CAMERA SPECS",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. PRODUCT BRAND & IDENTITY",
+      "### 2. SCENE STYLING & SET DESIGN",
+      "### 3. STUDIO LIGHTING RIG & COLOR ENGINE",
+      "### 4. TECHNICAL CAMERA SPECS",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Commercial Product Photographer, Advertising Art Director, and Studio Lighting D..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Commercial Product Photographer, Advertising Art Director, and Studio Lighting D..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 12,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [
+      "Camera Specific Settings (e.g. Sony A7R)"
+    ],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\image_generation\\professional_portrait.md",
+    "headings": [
+      "# Professional Studio Portrait Prompt Generator",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. IDENTITY & SUBJECT",
+      "### 2. CLOTHING & STYLING",
+      "### 3. CAMERA SETUP & COMPOSITION",
+      "### 4. LIGHTING & COLOR ENGINE",
+      "### 5. TECHNICAL CONSTRAINTS & RETOUCHING",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. IDENTITY & SUBJECT",
+      "### 2. CLOTHING & STYLING",
+      "### 3. CAMERA SETUP & COMPOSITION",
+      "### 4. LIGHTING & COLOR ENGINE",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Professional Fashion & Corporate Portrait Photographer, Camera Director, and High-End Reto..."
+      ],
+      [
+        "markdown",
+        "You are a Professional Fashion & Corporate Portrait Photographer, Camera Director, and High-End Reto..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 10,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\image_generation\\ui_mockup_visual.md",
+    "headings": [
+      "# UI/UX Mockup Visual Prompt Architect",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\learning\\concept_explainer.md",
+    "headings": [
+      "# Plain-Language Concept Explainer",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 4,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\learning\\quiz_generator.md",
+    "headings": [
+      "# Interactive Quiz Generator",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\learning\\study_plan.md",
+    "headings": [
+      "# Spaced Repetition Study Planner",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 10,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\learning\\tutor_session.md",
+    "headings": [
+      "# Socratic Expert Tutor Session",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\productivity\\meeting_agenda.md",
+    "headings": [
+      "# Timed Meeting Agenda Builder",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\productivity\\task_breakdown.md",
+    "headings": [
+      "# Work Breakdown Structure (WBS) & Task Planner",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\productivity\\weekly_review.md",
+    "headings": [
+      "# Weekly Performance Review Architect",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 4,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\research\\competitive_analysis.md",
+    "headings": [
+      "# Business Competitive Strategy Analyst",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. LANDSCAPE BOUNDARIES",
+      "### 2. ANALYTICAL DECOMPOSITION",
+      "### 3. OUTPUT REQUIREMENTS",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. LANDSCAPE BOUNDARIES",
+      "### 2. ANALYTICAL DECOMPOSITION",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Competitive Strategy Consultant, Market Analyst, and Strategic Business Intellig..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Competitive Strategy Consultant, Market Analyst, and Strategic Business Intellig..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\research\\literature_review.md",
+    "headings": [
+      "# Academic Literature Review Synthesis",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. STUDY PARAMETERS & SCOPE",
+      "### 2. THEMATIC SYNTHESIS STRUCTURE",
+      "### 3. OUTPUT SPECIFICATIONS",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. STUDY PARAMETERS & SCOPE",
+      "### 2. THEMATIC SYNTHESIS STRUCTURE",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Lead Academic Researcher, University Professor, and Rigorous Scientific Writer specializin..."
+      ],
+      [
+        "markdown",
+        "You are a Lead Academic Researcher, University Professor, and Rigorous Scientific Writer specializin..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 7,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\research\\topic_deep_dive.md",
+    "headings": [
+      "# Subject Matter Expert Topic Deep Dive",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\api_design.md",
+    "headings": [
+      "# RESTful & OpenAPI API Design Specifier",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. API PROFILE & SECURITY",
+      "### 2. ARCHITECTURAL PROTOCOLS",
+      "### 3. OUTPUT SPECIFICATION CONTRACTS",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. API PROFILE & SECURITY",
+      "### 2. ARCHITECTURAL PROTOCOLS",
+      "### 3. OUTPUT SPECIFICATION CONTRACTS",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal API Architect and REST/GraphQL Integration Specialist. Your goal is to design a ..."
+      ],
+      [
+        "markdown",
+        "You are a Principal API Architect and REST/GraphQL Integration Specialist. Your goal is to design a ..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\code_review.md",
+    "headings": [
+      "# Professional Code Reviewer",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 1,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": false,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\database_design.md",
+    "headings": [
+      "# Relational & NoSQL Database Schema Architect",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. TARGET DOMAIN & TECH STACK",
+      "### 2. DATA MODELING STRATEGIES",
+      "### 3. EXPECTED DELIVERABLES",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. TARGET DOMAIN & TECH STACK",
+      "### 2. DATA MODELING STRATEGIES",
+      "### 3. EXPECTED DELIVERABLES",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Database Architect specializing in writing performant, secure, and highly normal..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Database Architect specializing in writing performant, secure, and highly normal..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 4,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [
+      "SQL Schema / DDL Statements"
+    ],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\full_stack_application.md",
+    "headings": [
+      "# Full Stack Application Blueprint Generator",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. PROJECT SCOPE & IDENTITY",
+      "### 2. ARCHITECTURAL REQUIREMENTS",
+      "### 3. EXPECTED DELIVERABLES",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. PROJECT SCOPE & IDENTITY",
+      "### 2. ARCHITECTURAL REQUIREMENTS",
+      "### 3. EXPECTED DELIVERABLES",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Senior Software Architect & Lead Full-Stack Developer specializing in building secure, sca..."
+      ],
+      [
+        "markdown",
+        "You are a Senior Software Architect & Lead Full-Stack Developer specializing in building secure, sca..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\security_audit.md",
+    "headings": [
+      "# Application Security & Threat Auditor",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 4,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\software_development\\testing_strategy.md",
+    "headings": [
+      "# QA & Software Testing Strategy Planner",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\uiux_design\\accessibility_review.md",
+    "headings": [
+      "# Accessibility Review Checklist",
+      "## Purpose",
+      "## Required Context",
+      "## Template",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 4,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\uiux_design\\product_design_system.md",
+    "headings": [
+      "# Product Design System & Token Architect",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "### 1. PRODUCT BRAND & IDENTITY",
+      "### 2. CORE VISUAL ENGINE & TOKENS",
+      "### 3. COMPONENT LIBRARY (ATOMIC METHODOLOGY)",
+      "### 4. DELIVERABLES EXPECTED",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Full Example Prompt",
+      "### 1. PRODUCT BRAND & IDENTITY",
+      "### 2. CORE VISUAL ENGINE & TOKENS",
+      "### 3. COMPONENT LIBRARY (ATOMIC METHODOLOGY)",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices",
+      "## Common Mistakes to Avoid"
+    ],
+    "code_blocks": [
+      [
+        "markdown",
+        "You are a Principal Product Designer & Design Systems Architect specializing in bridging visual aest..."
+      ],
+      [
+        "markdown",
+        "You are a Principal Product Designer & Design Systems Architect specializing in bridging visual aest..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\uiux_design\\user_research.md",
+    "headings": [
+      "# UX User Research Planner",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 8,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\uiux_design\\wireframe_specification.md",
+    "headings": [
+      "# Wireframe Specification & Layout Builder",
+      "## Purpose",
+      "## When to Retrieve This Template",
+      "## Prompt Framework",
+      "## Required Context",
+      "## Optional Configuration",
+      "## Example Prompt",
+      "## Best Practices"
+    ],
+    "obsolete_headings": [
+      "## Required Context",
+      "## Optional Configuration",
+      "## Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\_case_studies\\image_generation_example.md",
+    "headings": [
+      "### IMAGE GUIDANCE (VERY IMPORTANT)",
+      "### SUBJECT",
+      "### CLOTHING & STYLING",
+      "### POSE & EXPRESSION",
+      "### BACKGROUND",
+      "### LIGHTING",
+      "### COLOR & MOOD",
+      "### COMPOSITION",
+      "### RETOUCHING RULES",
+      "### CONSTRAINTS",
+      "### OUTPUT QUALITY"
+    ],
+    "obsolete_headings": [],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 6,
+      "brackets_count": 0,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": true,
+    "is_blueprint_aligned": true,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\_case_studies\\latex_beamer_example.md",
+    "headings": [
+      "# Master Prompt \u2014 LaTeX Beamer Presentation Generation",
+      "## HOW TO USE THIS PROMPT",
+      "## 1. PRESENTATION IDENTITY",
+      "## 2. THEME & VISUAL DESIGN",
+      "### 2a. Base Beamer Theme",
+      "### 2b. Colour Palette",
+      "### 2c. Colour Application Rules",
+      "## 3. TYPOGRAPHY",
+      "## 4. REQUIRED PACKAGES",
+      "## 5. SLIDE DIMENSIONS",
+      "## 6. FRAME TITLE TEMPLATE",
+      "## 7. FOOTLINE",
+      "## 8. SLIDE TYPES \u2014 Use These Templates",
+      "### 8a. Title Slide (always first)",
+      "### 8b. Table of Contents (second slide)",
+      "### 8c. Section Divider Slide (between major sections)",
+      "### 8d. Standard Content Slide (bullets)",
+      "### 8e. Two-Column Slide (text + image, or text + table)",
+      "### 8f. Highlighted Key-Fact Slide (big number / stat callout)",
+      "### 8g. Block Slide (definition / theorem / key concept)",
+      "### 8h. Code Listing Slide",
+      "### 8i. Table Slide",
+      "### 8j. Image Full-Width Slide",
+      "### 8k. Thank You / Closing Slide (always last)",
+      "## 9. TABLE RULES ON SLIDES",
+      "## 10. OVERLAY / PROGRESSIVE REVEAL (optional)",
+      "## 11. SECTION NUMBERING IN TOC",
+      "## 12. CODE LISTINGS IN BEAMER",
+      "## 13. COMMON BEAMER PITFALLS",
+      "## 14. SLIDE-COUNT GUIDANCE",
+      "## 15. CONTENT TO INCLUDE IN THE PRESENTATION",
+      "## 16. OUTPUT REQUIREMENTS"
+    ],
+    "obsolete_headings": [],
+    "code_blocks": [
+      [
+        "latex",
+        "\\usetheme{default}\n\\useinnertheme{circles}        % bullet point style\n\\useoutertheme{infolines}    ..."
+      ],
+      [
+        "latex",
+        "\\definecolor{bgmain}{HTML}{...}\n\\definecolor{primary}{HTML}{...}\n\\definecolor{accent}{HTML}{...}\n\\de..."
+      ],
+      [
+        "latex",
+        "% Background\n\\setbeamercolor{background canvas}{bg=bgmain}\n\n% Title slide\n\\setbeamercolor{title}{fg=..."
+      ],
+      [
+        "latex",
+        "\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{microtype}\n\n% ..."
+      ],
+      [
+        "latex",
+        "\\usepackage{booktabs}           % professional table rules\n\\usepackage{tabularx}           % auto-wi..."
+      ],
+      [
+        "latex",
+        "\\documentclass[aspectratio=169, 11pt]{beamer}..."
+      ],
+      [
+        "latex",
+        "\\documentclass[aspectratio=43, 11pt]{beamer}..."
+      ],
+      [
+        "latex",
+        "\\setbeamertemplate{frametitle}{\n  \\vskip0.4em\n  \\usebeamerfont{frametitle}\\usebeamercolor[fg]{framet..."
+      ],
+      [
+        "latex",
+        "\\setbeamertemplate{footline}{\n  \\leavevmode\n  \\hbox{%\n    \\begin{beamercolorbox}[wd=.33\\paperwidth,h..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}[plain]\n  \\titlepage\n\\end{frame}..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Outline}\n  \\tableofcontents[hideallsubsections]\n\\end{frame}..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}[plain]\n  \\begin{center}\n    \\vfill\n    {\\Large\\bfseries\\color{accent} Section Title}\\\\..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\framesubtitle{Optional subtitle}\n  \\begin{itemize}\n    \\item First key..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{columns}[T]\n    \\begin{column}{0.52\\textwidth}\n      \\begin{item..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{columns}[c]\n    \\begin{column}{0.45\\textwidth}\n      \\centering\n..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{block}{Definition: Normal Form}\n    A relation is in BCNF if eve..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}[fragile]{Frame Title}\n  \\begin{lstlisting}[language=SQL, basicstyle=\\ttfamily\\scriptsi..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{table}\n    \\centering\n    \\scriptsize\n    \\begin{tabularx}{\\line..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{center}\n    \\includegraphics[width=0.9\\linewidth, height=0.78\\te..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}[plain]\n  \\begin{center}\n    \\vfill\n    {\\LARGE\\bfseries\\color{accent} Thank You}\\\\[1em..."
+      ],
+      [
+        "latex",
+        "\\begin{frame}{Frame Title}\n  \\begin{itemize}\n    \\item<1-> Always visible from slide 1 onwards\n    \\..."
+      ],
+      [
+        "latex",
+        "% Automatically insert section divider slides\n\\AtBeginSection[]{\n  \\begin{frame}[plain]\n    \\centeri..."
+      ],
+      [
+        "latex",
+        "\\lstset{\n  backgroundcolor=\\color{primary!8},\n  basicstyle=\\ttfamily\\scriptsize,\n  breaklines=true,\n..."
+      ],
+      [
+        "",
+        "Slide 1: Title slide \u2014 \"Insurance Claim Processing System\", subtitle \"Database Design Report\", autho..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 0,
+      "brackets_count": 19,
+      "angle_brackets_count": 1,
+      "single_braces_count": 160
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": false,
+    "is_blueprint_aligned": true,
+    "has_implementation": true
+  },
+  {
+    "filepath": "knowledge_base\\_frameworks\\prompt_best_practices.md",
+    "headings": [
+      "# Prompt Engineering Best Practices",
+      "## 1. Role Assignment (Explicit vs. Implicit)",
+      "## 2. Constraint Specification",
+      "## 3. Output Format Definition",
+      "## 4. Context vs. Instruction Separation",
+      "## 5. Placeholder Usage Rules (`{{...}}` vs. `[...]`)",
+      "## 6. Chain-of-Thought (CoT) Triggers",
+      "## 7. Length and Specificity Calibration",
+      "## 8. Avoiding Ambiguity",
+      "## 9. RAG-Optimized Writing (For Knowledge Base Documents)",
+      "## 10. Common Anti-Patterns to Avoid"
+    ],
+    "obsolete_headings": [
+      "# Prompt Engineering Best Practices"
+    ],
+    "code_blocks": [],
+    "placeholders": {
+      "double_braces_count": 2,
+      "brackets_count": 0,
+      "angle_brackets_count": 3,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": true,
+    "is_placeholder_compliant": false,
+    "is_blueprint_aligned": false,
+    "has_implementation": false
+  },
+  {
+    "filepath": "knowledge_base\\_frameworks\\prompt_frameworks.md",
+    "headings": [
+      "# Universal Prompt Engineering Frameworks",
+      "## 1. Universal Prompt Framework (Role-Goal-Context-Constraints-Output)",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 2. Software Development Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 3. UI/UX Design Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 4. Learning & Pedagogy Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 5. Business Communication Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 6. Research & Academic Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 7. Image Generation Prompt Framework",
+      "### Skeleton Structure",
+      "### When to Use",
+      "## 8. Data Analysis Framework",
+      "### Skeleton Structure",
+      "### When to Use"
+    ],
+    "obsolete_headings": [],
+    "code_blocks": [
+      [
+        "markdown",
+        "ROLE: [Define who the AI is acting as, its specific expertise, and its professional tone]\nGOAL: [Def..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Senior Software Architect & Specialized Developer\n[PROJECT IDENTITY]    System..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Senior Product Designer & Design Systems Architect\n[PRODUCT IDENTITY]    Name ..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Expert Pedagogue & Subject Matter Expert\n[STUDENT PROFILE]     Prior knowledge..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Specialized Corporate Professional or Communications Advisor\n[COMMUNICATION GO..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Lead Researcher & Rigorous Academic Analyst\n[RESEARCH TOPIC]      The primary ..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]         Professional Visual Director & Camera/Lighting Expert\n[IDENTITY REFERENCE] Refe..."
+      ],
+      [
+        "markdown",
+        "[AGENT ROLE]          Principal Data Analyst & Business Intelligence Expert\n[DATASET SCHEMA]      In..."
+      ]
+    ],
+    "placeholders": {
+      "double_braces_count": 0,
+      "brackets_count": 56,
+      "angle_brackets_count": 0,
+      "single_braces_count": 0
+    },
+    "leakage_indicators": [],
+    "is_template_compliant": false,
+    "is_placeholder_compliant": false,
+    "is_blueprint_aligned": true,
+    "has_implementation": true
+  }
+]

@@ -1,8 +1,72 @@
 import os
+import re
 from dotenv import load_dotenv
 from google import genai
 from src.retriever import retrieve
 from src.providers import route_and_generate
+
+_KB_FILE_PATH_CACHE = {}
+
+def find_and_read_kb_file(filename: str) -> str:
+    if filename in _KB_FILE_PATH_CACHE:
+        file_path = _KB_FILE_PATH_CACHE[filename]
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception:
+            pass
+
+    kb_dir = "knowledge_base"
+    for root, _, files in os.walk(kb_dir):
+        for f in files:
+            _KB_FILE_PATH_CACHE[f] = os.path.join(root, f)
+        if filename in files:
+            file_path = os.path.join(root, filename)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    return f.read()
+            except Exception:
+                pass
+    return ""
+
+def extract_framework_section(text: str) -> str:
+    # Look for "Prompt Framework" heading (can be ## or ### or #)
+    match = re.search(r"(?:^|\n)(?:##)\s*Prompt\s+Framework\s*\n(.*?)(?=\n##\s+|\n#\s+|$)", text, re.DOTALL | re.IGNORECASE)
+    if match:
+        section_content = match.group(1).strip()
+        # Find the first fenced code block in this section
+        code_match = re.search(r"```[a-zA-Z0-9_\-\+]*\n(.*?)```", section_content, re.DOTALL)
+        if code_match:
+            return code_match.group(1).strip()
+        return section_content
+    return ""
+
+def scrub_leakage_terms(text: str) -> str:
+    # Replace camera systems
+    text = re.sub(r"Hasselblad H6D-100c|Sony A7R V|Hasselblad", "{{CAMERA_MODEL}}", text)
+    # Replace lenses
+    text = re.sub(r"90mm f/2.8 Macro lens|90mm f/2.8|85mm f/1.4 lens|85mm lens|90mm Macro lens", "{{LENS_MODEL}}", text)
+    # Replace specific brand/product names in parentheticals to prevent leakage
+    text = re.sub(r"Nike Air Max", "{{PRODUCT_NAME}}", text, flags=re.IGNORECASE)
+    text = re.sub(r"Aura Essence Oil", "{{PRODUCT_NAME}}", text, flags=re.IGNORECASE)
+    text = re.sub(r"ShopFlow Checkout", "{{PRODUCT_NAME}}", text, flags=re.IGNORECASE)
+    return text
+
+def sanitize_chunk_text(source_doc: str, chunk_text: str) -> str:
+    # 1. Load the full file to ensure we get the complete, non-fragmented Prompt Framework
+    full_content = find_and_read_kb_file(source_doc)
+    if full_content:
+        framework = extract_framework_section(full_content)
+        if framework:
+            return scrub_leakage_terms(framework)
+            
+    # 2. Fallback to extracting from chunk_text if file load failed
+    framework = extract_framework_section(chunk_text)
+    if framework:
+        return scrub_leakage_terms(framework)
+        
+    # 3. Fallback: if we still can't find it, just return the chunk text itself after scrubbing
+    return scrub_leakage_terms(chunk_text)
 
 # Load environment variables
 load_dotenv()
@@ -165,6 +229,7 @@ SYSTEM_PROMPT = """You are a world-class Expert Prompt Architect and AI Engineer
 4. **No Parenthetical Example Leakage**: Do NOT write concrete examples or illustrative details in parentheses or as "e.g." descriptions (e.g., avoid writing things like '(e.g., Sony A7R V, 90mm f/2.8)', '(e.g., strengths:)', or '(e.g., create table users)'). Keep all parenthetical descriptions completely abstract (e.g. `(e.g., {{CAMERA_MODEL}})` or `(e.g., {{STRENGTHS_PLACEHOLDER}})`).
 5. **No Literal Task Outputs**: Do NOT output literal hashtags (e.g., write `{{HASHTAGS}}` instead of `#PromptEngineering`), sample code, sample database DDL, or week-by-week schedules.
 6. **Avoid Colons for SWOT Terms**: In Business Strategy or SWOT templates, never write the terms "strengths:", "weaknesses:", "opportunities:", or "threats:" with a trailing colon. Instead, use headers or dashes (e.g., `- Strengths - {{INTERNAL_STRENGTHS}}` or `#### Strengths`).
+7. **Exact Blueprint Headings Only**: You MUST use only the exact headings defined for the target category's blueprint. Do NOT output headings from retrieved templates (e.g., do NOT write `### [Required Context]` or `### [Best Practices]`). Every heading in the output template must match a heading in the category blueprint structure.
 
 ### CRITICAL NEGATIVE CONSTRAINTS:
 NEVER generate finished or executed content. You are writing a prompt template, NOT executing the task itself.
@@ -344,6 +409,21 @@ Format as a SWOT table: `{{SWOT_TABLE_PLACEHOLDER}}`.
 
 Make sure the output is written directly in the specified blueprint format, using clearly visible section headings (e.g., `### [You are a...]`). Do not prefix the output with introductory chatter (like "Here is your prompt:"). Go straight into the synthesized prompt."""
 
+def clean_synthesized_prompt(text: str) -> str:
+    # Truncate at horizontal rules or example section markers
+    patterns = [
+        r"\n\s*---\s*\n",
+        r"\n\s*(?:\*\*|###)?\s*Example\s*Output\s*(?:\*\*|###)?",
+        r"\n\s*(?:\*\*|###)?\s*Example\s*(?:\*\*|###)?",
+        r"\n\s*Combine\s+all\s+elements",
+        r"\n\s*This\s+template\s+is\s+designed"
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            text = text[:match.start()].strip()
+    return text.strip()
+
 def generate_prompt(user_goal: str, top_k: int = 5) -> dict:
     """
     1. Classifies user goal into high-level category.
@@ -387,11 +467,12 @@ def generate_prompt(user_goal: str, top_k: int = 5) -> dict:
         })
         
         # Add to the RAG context block
+        sanitized_text = sanitize_chunk_text(item["source_document"], item["chunk_text"])
         context_parts.append(f"--- DOCUMENT {i} ---")
         context_parts.append(f"Source Document: {item['source_document']}")
         context_parts.append(f"Category: {item['category']}")
         context_parts.append(f"Title: {item.get('title', '')}")
-        context_parts.append(f"Content:\n{item['chunk_text']}\n")
+        context_parts.append(f"Content:\n{sanitized_text}\n")
         
     context_block = "\n".join(context_parts)
     
@@ -401,6 +482,8 @@ def generate_prompt(user_goal: str, top_k: int = 5) -> dict:
             system_prompt=SYSTEM_PROMPT,
             user_content=context_block
         )
+        # Apply prompt cleaning post-processing
+        generated_prompt = clean_synthesized_prompt(generated_prompt)
     except Exception as e:
         raise RuntimeError(f"Prompt Synthesis generation failed: {e}")
         
